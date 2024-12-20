@@ -13,9 +13,17 @@
   "main": "./extension.js",
   "contributes": {
     "commands": [{
-      "command": "thebestextension.helloWorld",
-      "title": "Hello World"
-    }]
+      "command": "thebestextension.startPomodoro",
+      "title": "Start Pomodoro"
+  },
+  {
+      "command": "thebestextension.setWorkDuration",
+      "title": "Set Work Duration"
+  },
+  {
+      "command": "thebestextension.setBreakDuration",
+      "title": "Set Break Duration"
+  }]
   },
   "scripts": {
     "lint": "eslint .",
