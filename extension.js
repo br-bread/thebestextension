@@ -1,8 +1,6 @@
 
 const vscode = require('vscode');
 
-//import { notifyUser, setWorkDuration, setBreakDuration } from './pomodoro.js';
-
 /**
  * @param {vscode.ExtensionContext} context
  */
@@ -13,6 +11,12 @@ let timer;
 let isPomodoroActive = false;
 
 function startTimer(duration, timerType) {
+	/*
+	Starts the pomodoro timer
+	Arguments:
+	- duration: duration of timer in seconds
+	- timerType: string with values "work" or "break"
+	*/
 	var notifications = [
 		"Keep working!",
 		"Great job! Keep working!",
@@ -48,34 +52,53 @@ function startTimer(duration, timerType) {
 }
 
 function notifyUser(message) {
+	/*
+	Sends a notification to user
+	Arguments:
+	- message: string with the message
+	*/
     const vscode = require('vscode');
     vscode.window.showInformationMessage(message);
 }
 
 function startPomodoro() {
+	/*
+	Starts Working timer
+	*/
     isPomodoroActive = true;
     notifyUser(`Pomodoro started! Work for ${workDuration / 60} minutes`);
     startTimer(workDuration, "work");
 }
 
 function startBreak() {
+	/*
+	Starts Break timer
+	*/
     notifyUser(`Break started! Relax for ${breakDuration / 60} minutes`);
     startTimer(breakDuration, "break");
 }
 
 function setWorkDuration(newDuration) {
+	/*
+	Changes Pomodoro duration
+	Arguments:
+	- newDuration: new duration of work in minutes
+	*/
     workDuration = newDuration * 60;
 	
 }
 
 function setBreakDuration(newDuration) {
+	/*
+	Changes Break duration
+	Arguments:
+	- newDuration: new duration of break in minutes
+	*/
     breakDuration = newDuration * 60;
 }
 
 function activate(context) {
 	console.log('Congratulations, your extension "thebestextension" is now active!');
-
-	//const { startPomodoro } = require('./pomodoro.js');
 
 	const disposable = vscode.commands.registerCommand('thebestextension.startPomodoro', startPomodoro);
 
