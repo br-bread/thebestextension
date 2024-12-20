@@ -1,6 +1,7 @@
 # TheBestExtension 
 
 This is an extension for VS code for working with Pomodoro timer!
+Done by Tsykanova Ksusha M3101
 
 ## Features
 
