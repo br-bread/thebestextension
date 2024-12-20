@@ -1,6 +1,7 @@
 # TheBestExtension 
 
 This is an extension for VS code for working with Pomodoro timer!
+
 Done by Tsykanova Ksusha M3101
 
 ## Features
@@ -16,7 +17,7 @@ The only requirement is to use vs code
 
 ## How to use
 
-Press Ctrl+Shift+P and select "Start Pomodoro" command to start new pomodoroю
+Press Ctrl+Shift+P and select "Start Pomodoro" command to start new pomodoro
 
 ## Extension Settings
 
